@@ -7,7 +7,6 @@ import {
   clearMessageFromLocalStorage,
   shouldClearLocalStorage,
 } from "../utils/localStorage";
-import PulseLoader from "react-spinners/PulseLoader";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -108,11 +107,9 @@ export default function Home() {
       >
         <div className="flex items-center justify-center h-screen">
           {isLoading ? (
-            <div className={isDarkMode ? "text-white" : "text-black"}>
-              <PulseLoader color="currentColor" size={10} />
-            </div>
+            <p className="text-xl font-medium">Will I dream tonight?</p>
           ) : (
-            <h1 className="text-xl">{message}</h1>
+            <p className="text-xl">{message}</p>
           )}
         </div>
       </main>
